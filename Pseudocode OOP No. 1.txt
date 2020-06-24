@@ -1,0 +1,129 @@
+Program:
+Class OperasiBilanganAbs
+
+Declare:
+Var a, b, c : double;
+
+Algorithm:
+setA(double a);
+setB(double b);
+setC();
+getA();
+getB();
+getC();
+tampil();
+
+-------------------------------
+
+Program:
+Class OperasiPenjumlahan extends OperasiBilanganAbs
+    
+Declare:    
+Var a, b, c : double;
+    
+Algorithm:    
+Override setter setA : input a = a;
+    
+Override setter setB : input b = b;
+    
+Override setter setC : input c = a + b;
+    
+Override getter getA : return a;
+    
+Override getter getB : return b;
+    
+Override getter getC : return c;
+    
+Override tampil : Write("Penjumlahan " + a + " + " + b + " = " + c);
+
+-------------------------------------
+
+Program:
+Class OperasiPengurangan extends OperasiBilanganAbs
+    
+Declare:    
+Var a, b, c : double;
+    
+Algorithm:    
+Override setter setA : input a = a;
+    
+Override setter setB : input b = b;
+    
+Override setter setC : input c = a - b;
+    
+Override getter getA : return a;
+    
+Override getter getB : return b;
+    
+Override getter getC : return c;
+    
+Override tampil : Write("Pengurangan " + a + " - " + b + " = " + c);
+
+-------------------------------------
+
+Program:
+Class OperasiPerkalian extends OperasiBilanganAbs
+    
+Declare:    
+Var a, b, c : double;
+    
+Algorithm:    
+Override setter setA : input a = a;
+    
+Override setter setB : input b = b;
+    
+Override setter setC : input c = a * b;
+    
+Override getter getA : return a;
+    
+Override getter getB : return b;
+    
+Override getter getC : return c;
+    
+Override tampil : Write("Perkalian " + a + " * " + b + " = " + c);
+
+-------------------------------------
+
+Program:
+Class OperasiPembagian extends OperasiBilanganAbs
+    
+Declare:    
+Var a, b, c : double;
+    
+Algorithm:    
+Override setter setA : input a = a;
+    
+Override setter setB : input b = b;
+    
+Override setter setC : input c = a / b;
+    
+Override getter getA : return a;
+    
+Override getter getB : return b;
+    
+Override getter getC : return c;
+    
+Override tampil : Write("Pembagian " + a + " / " + b + " = " + c);
+
+-----------------------------------------------------------
+
+Program:
+Class OperasiBilanganAbsCetak
+
+Declare:
+cetaksemua(OperasiBilanganAbs OB, double a, double b)
+OB.setA(a);
+OB.setB(b);
+OB.setC();
+OB.tampil();
+    
+Algorithm:  
+New Object OperasiPenjumlahan : jumlah;
+cetaksemua(jumlah, 10.5, 2.5);
+New Object OperasiPengurangan : kurang;
+cetaksemua(kurang, 10.5, 2.5);
+New Object OperasiPerkalian : kali;
+cetaksemua(kali, 10.5, 2.5);
+New Object OperasiPembagian : bagi;
+cetaksemua(bagi, 10.5, 2.5);
+    
